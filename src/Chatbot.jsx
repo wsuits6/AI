@@ -4,7 +4,7 @@ import axios from 'axios';
 const Chatbot = () => {
   const [message, setMessage] = useState('');
   const [chat, setChat] = useState([]);
-  const apiKey = 'ffcadb951ce238989d4da65a0e04228f036a5ff2';
+  const apiKey = import.meta.env.VITE_LLM_API_KEY || '';
 
   const sendMessage = async () => {
     if (!message.trim()) return;
